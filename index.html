@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧠 智能体总览 · Hermes Dashboard</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Microsoft YaHei',system-ui,sans-serif; background:#0f1420; color:#e8ecf4; padding:24px; }
+h1 { font-size:26px; margin-bottom:4px; }
+.sub { color:#8a94a8; font-size:13px; margin-bottom:24px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px; }
+.card { background:#1a2133; border:1px solid #2a3550; border-radius:12px; padding:18px; }
+.card-head { font-size:17px; font-weight:700; margin-bottom:2px; }
+.card-sub { color:#8a94a8; font-size:12px; margin-bottom:12px; }
+.sec-title { color:#7fb3ff; font-size:12px; font-weight:600; margin:10px 0 6px; }
+.task { padding:6px 10px; border-radius:8px; margin-bottom:6px; font-size:13px; background:#222b42; }
+.task.done { color:#6fcf97; }
+.task.warn { color:#f2c94c; background:#2b2433; }
+.task.todo { color:#c9d4ea; }
+.rules { margin-left:18px; font-size:12px; color:#9aa5bd; }
+.rules li { margin-bottom:4px; }
+.note { padding:6px 10px; background:#222b42; border-radius:8px; margin-bottom:6px; font-size:13px; }
+.wide { grid-column:1/-1; }
+.row { display:flex; gap:12px; flex-wrap:wrap; }
+.badge { display:inline-block; padding:4px 12px; border-radius:20px; font-size:12px; background:#243a5e; color:#8ec5ff; margin:4px 4px 0 0; }
+.dream { background:linear-gradient(135deg,#1c2340,#241f3d); border:1px solid #4a3f8a; }
+.footer { margin-top:24px; color:#5c6678; font-size:12px; text-align:center; }
+</style>
+</head>
+<body>
+<h1>🧠 智能体总览 · Hermes Dashboard</h1>
+<div class="sub">山嵬工作室 · 数据由 Hermes Agent 每日自动维护(对外脱敏版)</div>
+
+<div class="grid">
+  <div class="card wide dream">
+    <div class="card-head">🔮 Hermes 主动建议("做梦"区)</div>
+    <div class="card-sub">Hermes 每日扫描项目数据后自动更新此区</div>
+    <div class="row">
+      <span class="badge">⏰ 每日 08:00 自动分析</span>
+      <span class="badge">📤 推送至微信</span>
+      <span class="badge">🗂️ 同步 Obsidian</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">🏗️ 山嵬辨证引擎</div>
+    <div class="card-sub">中医辨证 AI · 可溯源 · 不替代执业医师</div>
+    <div class="sec-title">📌 当前任务</div>
+    <div class="task warn">⚠️ 肝癌病种准确率专项排查(双引擎补强)</div>
+    <div class="task todo">⬜ 经方派+金元四大家注册为正式专家</div>
+    <div class="task todo">⬜ CorrectKB 全量回归(基线已更新)</div>
+    <div class="sec-title">📜 核心规则</div>
+    <ul class="rules"><li>辨证输出必须可溯源至原文</li><li>信心指数&lt;5 提示"信息不足"</li><li>不开方、不替代执业医师、不虚构出处</li></ul>
+  </div>
+
+  <div class="card">
+    <div class="card-head">📚 中医古籍知识库</div>
+    <div class="card-sub">古籍 PDF → OCR → 校对 → 入库</div>
+    <div class="sec-title">📌 当前任务</div>
+    <div class="task warn">⚠️ 11 本 OCR 待清洗校对(3 本需人工复核)</div>
+    <div class="task todo">⬜ 补温病派文献(温热经纬/温病条辨)</div>
+    <div class="task todo">⬜ 金匮公版 OCR 校对</div>
+    <div class="sec-title">📜 核心规则</div>
+    <ul class="rules"><li>输出含页码溯源,禁止编造</li><li>OCR 保留原书页码标注</li></ul>
+  </div>
+
+  <div class="card">
+    <div class="card-head">🏪 生生济药房经营</div>
+    <div class="card-sub">饮片库存监控 · 调价审核 · 采购补货</div>
+    <div class="sec-title">📌 当前任务</div>
+    <div class="task warn">⚠️ 蜈蚣补货预警(存销比偏低)</div>
+    <div class="task done">✅ 车前草多编码合并(库存充足)</div>
+    <div class="task done">✅ 白前多编码合并(库存充足)</div>
+    <div class="sec-title">📜 核心规则</div>
+    <ul class="rules"><li>采购三刀决策(POS 实销→补货量→撤除)</li><li>毛利率目标 50-55%</li><li>多编码合并防误判</li></ul>
+  </div>
+
+  <div class="card">
+    <div class="card-head">🔍 Claw</div>
+    <div class="card-sub">抖音/头条内容采集分析</div>
+    <div class="sec-title">📌 内容</div>
+    <div class="task todo">⬜ AI 类收藏分析报告</div>
+    <div class="task todo">⬜ 抖音/头条采集工具</div>
+    <div class="task todo">⬜ WorkBuddy 专家白皮书</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">🗂️ Obsidian 笔记库</div>
+    <div class="card-sub">智能体中心 · 5 篇项目笔记</div>
+    <div class="note">📄 智能体中心</div>
+    <div class="note">📄 山嵬辨证引擎</div>
+    <div class="note">📄 中医古籍知识库</div>
+    <div class="note">📄 生生济药房经营</div>
+    <div class="note">📄 Claw</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">⚙️ 系统状态</div>
+    <div class="card-sub">Hermes Agent</div>
+    <div class="task todo">💬 微信接入:✅ 在线</div>
+    <div class="task todo">🎙️ GPU 语音转录:✅ RTX 2080</div>
+    <div class="task todo">🗒️ Obsidian 集成:✅ 已打通</div>
+    <div class="task todo">⏰ 每日"做梦":✅ 08:00</div>
+  </div>
+</div>
+<div class="footer">Hermes Agent · 智能体超级用户模式 · 对外脱敏版 · 完整数据仅存本机</div>
+</body>
+</html>
