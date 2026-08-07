@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="60">
-<title>🧠 智能体总览 · Hermes Dashboard</title>
+<title>🧠 智能体总览仪表盘</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Microsoft YaHei',system-ui,sans-serif; background:#0f1420; color:#e8ecf4; padding:24px; }
@@ -30,79 +29,71 @@ h1 { font-size:26px; margin-bottom:4px; }
 </style>
 </head>
 <body>
-<h1>🧠 智能体总览 · Hermes Dashboard</h1>
-<div class="sub">山嵬工作室 · 数据由 Hermes Agent 每日自动维护(对外脱敏版) · 🔄 每 60 秒自动刷新</div>
+<h1>🧠 智能体总览仪表盘</h1>
+<div class="sub">生成时间(脱敏版):2026-08-07 08:49 · 山嵬工作室 · 数据由 Hermes Agent 每日自动维护(对外脱敏版) · 🔄 每 60 秒自动刷新</div>
 
 <div class="grid">
   <div class="card wide dream">
-    <div class="card-head">🔮 Hermes 主动建议("做梦"区)</div>
-    <div class="card-sub">Hermes 每日扫描项目数据后自动更新此区</div>
+    <div class="card-head">🔮 Hermes 主动建议(“做梦”区)</div>
+    <div class="card-sub">Hermes 定时扫描项目数据后自动更新此区</div>
     <div class="row">
-      <span class="badge">⏰ 每日 08:00 自动分析</span>
-      <span class="badge">📤 推送至微信</span>
-      <span class="badge">🗂️ 同步 Obsidian</span>
+      <span class="badge">⏳ 等待首次“做梦”任务运行</span>
+      <span class="badge">🕐 计划:每天早上 8:00</span>
     </div>
   </div>
-
-  <div class="card">
-    <div class="card-head">🏗️ 山嵬辨证引擎</div>
-    <div class="card-sub">中医辨证 AI · 可溯源 · 不替代执业医师</div>
-    <div class="sec-title">📌 当前任务</div>
-    <div class="task warn">⚠️ 肝癌病种准确率专项排查(双引擎补强)</div>
-    <div class="task todo">⬜ 经方派+金元四大家注册为正式专家</div>
-    <div class="task todo">⬜ CorrectKB 全量回归(基线已更新)</div>
-    <div class="sec-title">📜 核心规则</div>
-    <ul class="rules"><li>辨证输出必须可溯源至原文</li><li>信心指数&lt;5 提示"信息不足"</li><li>不开方、不替代执业医师、不虚构出处</li></ul>
-  </div>
-
-  <div class="card">
-    <div class="card-head">📚 中医古籍知识库</div>
-    <div class="card-sub">古籍 PDF → OCR → 校对 → 入库</div>
-    <div class="sec-title">📌 当前任务</div>
-    <div class="task warn">⚠️ 11 本 OCR 待清洗校对(3 本需人工复核)</div>
-    <div class="task todo">⬜ 补温病派文献(温热经纬/温病条辨)</div>
-    <div class="task todo">⬜ 金匮公版 OCR 校对</div>
-    <div class="sec-title">📜 核心规则</div>
-    <ul class="rules"><li>输出含页码溯源,禁止编造</li><li>OCR 保留原书页码标注</li></ul>
-  </div>
-
-  <div class="card">
-    <div class="card-head">🏪 生生济药房经营</div>
-    <div class="card-sub">饮片库存监控 · 调价审核 · 采购补货</div>
-    <div class="sec-title">📌 当前任务</div>
-    <div class="task warn">⚠️ 蜈蚣补货预警(存销比偏低)</div>
-    <div class="task done">✅ 车前草多编码合并(库存充足)</div>
-    <div class="task done">✅ 白前多编码合并(库存充足)</div>
-    <div class="sec-title">📜 核心规则</div>
-    <ul class="rules"><li>采购三刀决策(POS 实销→补货量→撤除)</li><li>毛利率目标 50-55%</li><li>多编码合并防误判</li></ul>
-  </div>
-
-  <div class="card">
-    <div class="card-head">🔍 Claw</div>
-    <div class="card-sub">抖音/头条内容采集分析</div>
-    <div class="sec-title">📌 内容</div>
-    <div class="task todo">⬜ AI 类收藏分析报告</div>
-    <div class="task todo">⬜ 抖音/头条采集工具</div>
-    <div class="task todo">⬜ WorkBuddy 专家白皮书</div>
-  </div>
-
+  
+        <div class="card">
+          <div class="card-head">🏗️ 山嵬辨证引擎</div>
+          <div class="card-sub">辨证 AI 引擎</div>
+          <div class="card-body">
+            <div class="sec-title">📌 任务</div>
+            <div class="task todo">⬜ 肝癌低准确率(44.9%)专项排查——需DeepSeek双引擎补强</div><div class="task todo">⬜ 将黄煌经方派+金元四大家注册为正式专家</div><div class="task todo">⬜ CorrectKB 新一轮全量回归(基线已更新至 2193 例)</div>
+            <div class="sec-title">📜 规则</div>
+            <ul class="rules"><li>维护中医辨证引擎稳定性,追踪 Bug,管理验证集和自动化</li><li>辨证输出必须可溯源至原文;信心指数 &lt;5 提示&quot;信息不足&quot;</li><li>不开方、不替代执业医师、不虚构出处</li><li>[ ] 肝癌低准确率(44.9%)专项排查——需DeepSeek双引擎补强</li></ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head">📚 中医古籍知识库</div>
+          <div class="card-sub">古籍 OCR → 知识库</div>
+          <div class="card-body">
+            <div class="sec-title">📌 任务</div>
+            <div class="task todo">⬜ 11本 OCR 输出跑 tcm-collation-review 清洗校对</div><div class="task todo">⬜ 补温病派文献(温热经纬/温病条辨)</div><div class="task todo">⬜ 金匮公版 OCR 校对</div>
+            <div class="sec-title">📜 规则</div>
+            <ul class="rules"><li>中医古籍 PDF → OCR → 校对 → 知识库入库</li><li>输出含页码溯源，禁止编造内容</li><li>OCR 结果保留原书页码标注</li><li>[ ] 11本 OCR 输出跑 tcm-collation-review 清洗校对</li></ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head">🏪 生生济药房经营</div>
+          <div class="card-sub">药房库存/采购/调价</div>
+          <div class="card-body">
+            <div class="sec-title">📌 任务</div>
+            <div class="task todo">⬜ 暂无任务记录</div>
+            <div class="sec-title">📜 规则</div>
+            <ul class="rules"><li>中药饮片库存监控 + 调价审核 + 采购补货 + 货款结算</li><li>采购三刀决策：第一刀 POS 实销 → 第三刀补货量 → 第二刀撤除</li><li>毛利率目标 50-55%</li><li>储值卡金额 ÷2 折算</li></ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head">🔍 Claw</div>
+          <div class="card-sub">抖音/头条采集分析</div>
+          <div class="card-body">
+            <div class="sec-title">📌 任务</div>
+            <div class="task todo">⬜ 暂无任务记录</div>
+            <div class="sec-title">📜 规则</div>
+            <ul class="rules"><li>—</li></ul>
+          </div>
+        </div>
   <div class="card">
     <div class="card-head">🗂️ Obsidian 笔记库</div>
-    <div class="card-sub">智能体中心 · 5 篇项目笔记</div>
-    <div class="note">📄 智能体中心</div>
-    <div class="note">📄 山嵬辨证引擎</div>
-    <div class="note">📄 中医古籍知识库</div>
-    <div class="note">📄 生生济药房经营</div>
-    <div class="note">📄 Claw</div>
+    <div class="card-sub">12 篇笔记 · 位于 Documents/Obsidian Vault</div>
+    <div class="note">📄 AI系统检查单</div><div class="note">📄 Claw</div><div class="note">📄 Hindsight部署流程</div><div class="note">📄 WorkBuddy-flash看图机制调查</div><div class="note">📄 中医古籍知识库</div><div class="note">📄 后台自动化运维手册</div><div class="note">📄 山嵬辨证引擎</div><div class="note">📄 技能调用方法</div><div class="note">📄 智能体中心</div><div class="note">📄 模型通道成本决策</div><div class="note">📄 生生济药房经营</div><div class="note">📄 跟AI高效沟通的方法</div>
   </div>
-
   <div class="card">
     <div class="card-head">⚙️ 系统状态</div>
-    <div class="card-sub">Hermes Agent</div>
+    <div class="card-sub">Hermes Agent 已连接</div>
     <div class="task todo">💬 微信接入:✅ 在线</div>
     <div class="task todo">🎙️ GPU 语音转录:✅ RTX 2080</div>
     <div class="task todo">🗒️ Obsidian 集成:✅ 已打通</div>
-    <div class="task todo">⏰ 每日"做梦":✅ 08:00</div>
+    <div class="task todo">⏰ 定时“做梦”:待启动</div>
   </div>
 </div>
 <div class="footer">Hermes Agent · 智能体超级用户模式 · 对外脱敏版 · 完整数据仅存本机</div>
